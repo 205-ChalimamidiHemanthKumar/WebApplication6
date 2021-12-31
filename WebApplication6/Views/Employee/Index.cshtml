@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<ul>
+    @foreach (var emp in ViewData["employees"] as IList<Employee>)
+            {
+                <li>
+                    @emp.FirstName
+                </li>
+            }
+</ul>
+
+<label>Total Employees:</label> @ViewBag.TotalEmployees <br />
+
+<h1>@ViewBag.CompanyName</h1>
